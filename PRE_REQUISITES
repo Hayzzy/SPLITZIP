@@ -1,0 +1,31 @@
+#Before you run those files, you may need to install the following libraries:
+
+#ON WINDOWS USE POWERSHELL OR CMD:
+ pip install \
+  pillow \
+  pytesseract \
+  PyMuPDF \
+  pdf2file \
+  pdf2image \
+  opencv-python
+
+#ON MACOS (WITH HOMEBREW)
+brew install tesseract poppler
+pip3 install \
+    pillow \
+    pytesseract \
+    PyMuPDF \
+    pdf2file \
+    pdf2image \
+    opencv-python
+
+#ON UBUNTU/DEBIAN BASED LINUX (IN TERMINAL)
+sudo apt update
+sudo apt install -y python3-pip tesseract-ocr libtesseract-dev poppler-utils
+pip3 install \
+    pillow \
+    pytesseract \
+    PyMuPDF \
+    pdf2file \
+    pdf2image \
+    opencv-python
