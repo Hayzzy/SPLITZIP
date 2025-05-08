@@ -22,7 +22,7 @@ def split_pdf_to_zip(input_pdf_path, output_zip_path):
             writer.write(f)
         page_paths.append(filepath)
 
-        # ✅ Show progress
+        # ✅ Shows progress, can commit if not required
         print(f"✅ Saved page {i+1} of {total_pages}")
 
     print("\n📦 Zipping pages...")
@@ -32,7 +32,6 @@ def split_pdf_to_zip(input_pdf_path, output_zip_path):
 
     print(f"\n✅ Created ZIP: {output_zip_path}")
 
-    # Cleanup
     for file_path in page_paths:
         os.remove(file_path)
     os.rmdir(temp_folder)
