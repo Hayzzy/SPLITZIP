@@ -1,6 +1,6 @@
 import zipfile
 import os
-import fitz  # PyMuPDF
+import fitz
 import pytesseract
 from PIL import Image
 import json
@@ -9,7 +9,6 @@ def extract_ocr_from_zip(zip_path, output_json):
     temp_dir = "unzipped_scanned"
     os.makedirs(temp_dir, exist_ok=True)
 
-    # Unzip the PDFs
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(temp_dir)
 
@@ -36,13 +35,11 @@ def extract_ocr_from_zip(zip_path, output_json):
         percent = round((idx / total_files) * 100)
         print(f"✅ Processed {filename} ({percent}%)")
 
-    # Save to JSON
     with open(output_json, "w", encoding="utf-8") as f:
         json.dump(page_data, f, indent=4, ensure_ascii=False)
 
     print(f"\n🎉 Done! OCR results saved to: {output_json}")
 
-# === USAGE ===
 zip_path = "split_pages_output.zip"   # Your zipped PDFs
 output_json = "output.json"
 
