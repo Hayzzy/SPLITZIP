@@ -39,8 +39,7 @@ def split_pdf_to_zip(input_pdf_path, output_zip_path):
 
     print("🧹 Temporary files cleaned up.")
 
-# === USAGE ===
-input_pdf = "tryingtodoit.pdf"  # Replace with actual file name
+input_pdf = "input.pdf"  # Replace with actual file name
 output_zip = "split_pages_output.zip"
 
 split_pdf_to_zip(input_pdf, output_zip)
